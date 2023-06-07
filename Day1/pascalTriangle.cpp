@@ -18,12 +18,12 @@ vector<int> generateRow(int row) {
         return ansRow;
     }    
 
-    vector<vector<int>> generate(int numRows) {
-        vector<vector<int>> ans;
-        //Generatind each row of pascal triangle
-        for(int i = 1; i <= numRows; i++) {
-            ans.push_back(generateRow(i));
-        }
-
-        return ans;
+vector<vector<int>> generate(int numRows) {
+    vector<vector<int>> ans;
+    //Generatind each row of pascal triangle
+    for(int i = 1; i <= numRows; i++) {
+        ans.push_back(generateRow(i));
     }
+
+    return ans;
+}
