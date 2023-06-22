@@ -1,8 +1,8 @@
 /*
 Return subset with sum K. Each element can be picked once.
 
-T.C - O(2^N)
-S.C - O(2^N)
+T.C - O(2^N * k)
+S.C - O(k * x)
 */
 
 void findSubsets(int idx, int sum, vector<int> &arr, int n, int k, vector<int> &ds, vector<vector<int>> &ans) {
