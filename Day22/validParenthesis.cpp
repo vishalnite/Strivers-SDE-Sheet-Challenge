@@ -17,8 +17,8 @@ bool isValidParenthesis(string expression)
 
           int t = st.top();
           if ((t == '(' && c == ')') 
-          or (t == '[' && c == ']') 
-          or (t == '{' && c == '}'))
+          || (t == '[' && c == ']') 
+          || (t == '{' && c == '}'))
             st.pop();
           else 
             return false;  
