@@ -2,7 +2,7 @@
 Find the next smaller element.
 [use stack]
 
-T.C - O(N)
+T.C - O(N) + O(N)
 S.C - O(N)
 */
 

@@ -2,7 +2,7 @@
 Find the next greater element at the right side of each element in the array.
 [It may ask for circular arrays -- Update index as i % n]
 
-T.C - O(N)
+T.C - O(N) + O(N)
 S.C - O(N)
 */
 
