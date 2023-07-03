@@ -48,3 +48,30 @@ Find the largest rectangle that can be formed from the given histogram.
 
     return ans;
  }
+
+ //Optimal SOlution
+  #include<bits/stdc++.h>
+ 
+ int largestRectangle(vector<int> &heights) {
+   
+    int n = heights.size();
+    stack<int> s;
+    int maxA = 0;
+
+    for(int i = 0; i <= n; i++) {
+      while(!s.empty() && (i == n || heights[s.top()] >= heights[i])) {
+        int height = heights[s.top()];
+        s.pop();
+        int width;
+        if(s.empty())
+          width = i;
+        else
+          width = i - s.top() - 1;
+        maxA = max(maxA, height * width);
+      }
+
+      s.push(i);
+    }
+
+    return maxA;
+ }
