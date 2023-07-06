@@ -1,6 +1,7 @@
 /*
 Find the number of consecutive previous days where the current stock price is greater than previous days.
 Calculate span for each day.
+[Brute force -- Traverse from current index to prev index and check -- O(N ^ 2)]
 
 T.C - O(N)
 S.C - O(N)
