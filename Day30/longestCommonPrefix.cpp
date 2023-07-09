@@ -16,10 +16,10 @@ string longestCommonPrefix(vector<string> &arr, int n)
     string first = arr[0];
     string last = arr[n - 1];
 
-    int i = 0;
-    while(first[i] == last[i]) {
+    for(int i = 0; i < first.size(); i++) {
+        if(first[i] != last[i])
+            break;
         longestPrefix += first[i];
-        i++;
     }
 
     return longestPrefix;
