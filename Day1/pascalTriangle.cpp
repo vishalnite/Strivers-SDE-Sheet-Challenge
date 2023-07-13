@@ -4,6 +4,8 @@ T.C - O(N * N)
 S.C - O(1)
 */
 
+#include<bits/stdc++.h>
+
 vector<int> generateRow(int row) {
         vector<int> ansRow;
         ansRow.push_back(1); //First element of each row is 1
