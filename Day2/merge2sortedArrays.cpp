@@ -1,7 +1,7 @@
 /*
 Merge 2 sorted arrays. arr1 size = m, arr2 size = n
 arr1 has the capacity to store m+n elements.
-Hint - Start from the end
+Hint - Start from the end 
 
 T.C - O(m + n)
 S.C - O(1)
