@@ -1,9 +1,10 @@
 /*
 Find the left view of a tree.
 [Perform level order traversal]
+[Optimal method is to use recursion as the space complexity would be O(H)]
 
 T.C - O(N)
-S.C - O(N)
+S.C - O(H)
 */
 
 #include <bits/stdc++.h> 
@@ -26,33 +27,20 @@ S.C - O(N)
     };
 
 ************************************************************/
+void recursion(TreeNode<int> *root, int level, vector<int> &ans) {
+    if(root == NULL)
+        return;
+
+    if(level == ans.size()) 
+        ans.push_back(root->data);
+
+    recursion(root->left, level + 1, ans);
+    recursion(root->right, level + 1, ans);
+}
 
 vector<int> getLeftView(TreeNode<int> *root)
 {
     vector<int> ans;
-    if(root == NULL)
-        return ans;
-    
-    queue<TreeNode<int>*> q;
-    q.push(root);
-
-    while(!q.empty()) {
-        ans.push_back(q.front()->data);
-        int n = q.size();
-
-        for (int i = 0; i < n; i++) {
-            if (!q.empty()) {
-                TreeNode<int> *node = q.front();
-
-                if (node->left != NULL)
-                    q.push(node->left);
-                if (node->right != NULL)
-                    q.push(node->right);
-
-                q.pop();
-            }
-        }
-    }
-
+    recursion(root, 0, ans);
     return ans;
 }
