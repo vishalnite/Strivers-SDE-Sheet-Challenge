@@ -3,9 +3,11 @@ Flatten a binary tree to a linked list. Convert preorder traversal to a linked l
 and the left should point to NULL.
 [Do a reverse postorder traversal -- right left root -- Also maintain a global variable to store prevNode]
 
-[It can be solved using morris traversal in constant space]
+[Optimal solution -- constant space complexity]
+[Based on Morris traversal -- connect last node to cur's right and cur's right to cur's left]
+
 T.C - O(N)
-S.C - O(N)
+S.C - O(1)
 */
 
 #include <bits/stdc++.h> 
@@ -29,27 +31,37 @@ S.C - O(N)
 
 ************************************************************/
 
-TreeNode<int> *prevNode = NULL;
+// TreeNode<int> *prevNode = NULL;
 
-void flatten(TreeNode<int>* node) {
-    if(node == NULL) 
-        return;
+// void flatten(TreeNode<int>* node) {
+//     if(node == NULL) 
+//         return;
 
-    flatten(node->right);
-    flatten(node->left);
+//     flatten(node->right);
+//     flatten(node->left);
 
-    node->right = prevNode;
-    node->left = NULL;
+//     node->right = prevNode;
+//     node->left = NULL;
 
-    prevNode = node;
-}
+//     prevNode = node;
+// }
 
 TreeNode<int> *flattenBinaryTree(TreeNode<int> *root)
 {   
-    if(root == NULL)
-        return root;
+    TreeNode<int> *cur = root;
+    while(cur != NULL) {
+        if(cur->left != NULL) {
+            TreeNode<int> *prev = cur->left;
 
-    flatten(root);
-    prevNode = NULL;
+            while(prev->right) {
+                prev = prev->right;
+            }
+
+            prev->right = cur->right;
+            cur->right = cur->left;
+        }
+        cur = cur->right;
+    }
+
     return root;
 }
