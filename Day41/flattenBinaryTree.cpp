@@ -59,6 +59,7 @@ TreeNode<int> *flattenBinaryTree(TreeNode<int> *root)
 
             prev->right = cur->right;
             cur->right = cur->left;
+            cur->left = NULL;
         }
         cur = cur->right;
     }
