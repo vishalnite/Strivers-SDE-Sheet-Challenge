@@ -2,7 +2,7 @@
 Find median in a running stream.
 [Use maxHeap and minHeap -- maxHeap will be greater in size then minHeap -- change accordingly]
 
-T.C - O(N)
+T.C - O(NlogN)
 S.C - O(N)
 */
 
