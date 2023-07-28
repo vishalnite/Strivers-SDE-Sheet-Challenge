@@ -3,8 +3,8 @@ Breadth First Search(BFS) in a graph.
 Here, the connected nodes should be put in sorted order and also the graph is disconnected.
 [First create adjacency list, if not already given -- maintain a queue to store neighboring nodes -- Finally store the remaining nodes(disconnected)]
 
-T.C - O(3N) ~ O(N)
-S.C - O(N) + O(2E) ~ O(2E)
+T.C - O(N) + O(2E)
+S.C - O(3N) ~ O(N)
 */
 
 #include <bits/stdc++.h> 
