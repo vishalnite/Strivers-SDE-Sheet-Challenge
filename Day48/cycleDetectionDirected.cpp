@@ -3,7 +3,7 @@ Find the cycle in a directed graph.
 [Same algorithm as undirected will not work here because the cycle formed should be on the same path]
 [DFS -- maintain two arrays vis[] and pathVis[] -- If both of them are 1 then there is a cycle]
 
-T.C - O(N + 2E)
+T.C - O(N + E)
 S.C - O(2N) [can be done in O(N) -- maintain a single vis[] -- mark 2 for every path visited]
 */
 
