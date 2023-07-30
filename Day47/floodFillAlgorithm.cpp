@@ -1,5 +1,5 @@
 /*
-Given a matrixa and a starting coordinate. From that starting node change the values to new values if they are adjacent(4-connectivity).
+Given a matrix and a starting coordinate. From that starting node change the values to new values if they are adjacent(4-connectivity).
 [use either BFS or  DFS]
 
 T.C - O(N*M)
