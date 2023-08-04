@@ -7,7 +7,7 @@ Find the shortest distance to all nodes from a source node.
 
 T.C - O(E * logE) -- Priority Queue
     - O(E * logV) -- Set
-S.C - O(2V)
+S.C - O(V^2) -- In the worst case -- Most dense graph
 */
 
 /* ---------------------- PRIORITY QUEUE -------------------- */
