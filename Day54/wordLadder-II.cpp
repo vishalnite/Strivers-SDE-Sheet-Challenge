@@ -1,6 +1,7 @@
 /*
 Same as word ladder problem, but also need to print all the shorter sequences.
 [Use BFS -- In queue store sequences -- only delete the word from set after each level]
+[Gives memory limit exceeds in Leetcode -- Optimized through DFS + Backtracking -- Not required in Interviews]
 
 T.C - O(N * word length * 26 * [logN])
 S.C - cannot be determined -- it will depend on the number of sequences obtained
