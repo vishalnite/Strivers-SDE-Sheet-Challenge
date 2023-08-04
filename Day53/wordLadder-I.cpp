@@ -3,7 +3,7 @@ Given a dictionary of words, a start word and a target word. All are of same siz
 to end word. Each trasfromation should exist in the dictionary.
 [Use BFS traversal and change each character of word from 'a' to 'z, if found put it into queue and erase from dictionary]
 
-T.C - O(N  * word length * 26)
+T.C - O(N  * word length * 26 * [logN])
 S.C - O(N)
 */
 
