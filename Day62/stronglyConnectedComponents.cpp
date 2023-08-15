@@ -1,5 +1,6 @@
 /*
-Strongly connected component - where each node can reach to other nodes
+Strongly connected component - where each node can reach to other nodes 
+SCC is only available in directed graphs.
 Find the number of SCC.
 [use Kosaraju's algorithm]
 [Sort the graph in terms of finishing time]

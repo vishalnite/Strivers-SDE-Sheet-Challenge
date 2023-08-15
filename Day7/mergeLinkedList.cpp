@@ -52,16 +52,12 @@ Node<int>* sortTwoLists(Node<int>* first, Node<int>* second)
         }
     }
 
-    while(first) {
+    if(first) {
         temp->next = first;
-        temp = first;
-        first = first->next;
     }
 
-    while(second) {
+    if(second) {
         temp->next = second;
-        temp = second;
-        second = second->next;
     }
 
     return head->next;
